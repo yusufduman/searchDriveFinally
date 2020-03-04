@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/usercp"
+    tools:context=".usercp" >
+
+    <Button
+        android:id="@+id/bilgilerim"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/bilgilerim"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bilgilerim3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bildirimler"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bilgilerim" />
+
+    <Button
+        android:id="@+id/bilgilerim4"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/cikis"
+        app:layout_constraintStart_toEndOf="@+id/bilgilerim3"
+        app:layout_constraintTop_toBottomOf="@+id/bilgilerim2" />
+
+    <Button
+        android:id="@+id/bilgilerim2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/yardim"
+        app:layout_constraintStart_toEndOf="@+id/bilgilerim"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,30 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/loginsplash"
     tools:context=".Login">
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="330dp"
+        android:background="#F68D9A"
+        android:ellipsize="none"
         android:ems="10"
         android:hint="Email"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:visibility="visible"
+        android:gravity="center"
+        android:textSize="20sp"
+        />
 
     <EditText
         android:id="@+id/editText3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="30dp"
+        android:background="#F68D9A"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:gravity="center"
+        android:textSize="20sp"/>
 
     <Button
         android:id="@+id/girisbutton"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
-        android:text="Giriş" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="500dp"
+        android:background="#ffff"
+        android:radius="200dp"
+        android:text="Giriş"
+        android:textColor="#000000"
+        android:textSize="20sp" />
 </RelativeLayout>

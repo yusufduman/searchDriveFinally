@@ -8,10 +8,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Hakkimizda"></activity>
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".usercp">
+
+        </activity>
+        <activity android:name=".Hakkimizda" />
         <activity android:name=".Login" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".activity_splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

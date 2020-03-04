@@ -4,6 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/anasayfaarka"
     tools:context=".Hakkimizda">
+
+    <Button
+        android:id="@+id/yenidokuman"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/yenidokuman"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/dokumankontrol"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/dokumankontrol"
+        app:layout_constraintStart_toEndOf="@+id/yenidokuman"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cizimekle"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/cizimekle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yenidokuman" />
+
+    <Button
+        android:id="@+id/dokumannerede"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/dokumannerede"
+        app:layout_constraintStart_toEndOf="@+id/cizimekle"
+        app:layout_constraintTop_toBottomOf="@+id/dokumankontrol" />
+
+    <Button
+        android:id="@+id/kullanicipaneli"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/kullanicipaneli"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
