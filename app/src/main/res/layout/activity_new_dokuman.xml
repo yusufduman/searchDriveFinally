@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/digerarka"
+    tools:context=".newDokuman">
+
+    <EditText
+        android:id="@+id/text_dokumansevk"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/editarka"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Döküman Sevk Tarihi"
+        android:inputType="textPersonName"
+        android:textColor="#6F000000"
+        android:textColorHint="#6F000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_dokumantipi" />
+
+    <Button
+        android:id="@+id/resim"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="124dp"
+        android:background="@drawable/yenidokumantekli"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/text_dokumannumarasi"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/editarka"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Döküman Numarası Giriniz"
+        android:inputType="textPersonName"
+        android:textColor="#6F000000"
+        android:textColorHint="#6F000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resim" />
+
+    <EditText
+        android:id="@+id/text_dokumantipi"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/editarka"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Döküman Tipini Giriniz"
+        android:inputType="textPersonName"
+        android:textColor="#6F000000"
+        android:textColorHint="#6F000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_dokumannumarasi" />
+
+    <EditText
+        android:id="@+id/text_kayiteden"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/editarka"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Dökümanı Kayıt Eden"
+        android:inputType="textPersonName"
+        android:textColor="#6F000000"
+        android:textColorHint="#6F000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_dokumansevk" />
+
+    <Button
+        android:id="@+id/btn_kayitet"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginLeft="204dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/butonresim"
+
+        android:text="KAYIT ET"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_kayiteden" />
+
+    <TextView
+        android:id="@+id/deneme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="654dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

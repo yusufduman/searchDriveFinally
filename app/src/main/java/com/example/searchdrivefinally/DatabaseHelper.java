@@ -11,17 +11,18 @@ import androidx.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public DatabaseHelper(@Nullable Context context) {
-        super(context, "Login.db", null, 1);
+        super(context, "Veritabani.db", null, 1);
     }
-
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create table user(email text primary key, password text)");
-    }
+        db.execSQL("Create table tbl_dokuman(DokumanNumarasi text, DokumanTipi text, DokumanSevkTarihi text, DokumanKayitEden text)");
 
+    }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     db.execSQL("drop table if exists user");
+        db.execSQL("drop table if exists tbl_dokuman");
     }
     public boolean insert(String email,String password){
         SQLiteDatabase db = this.getWritableDatabase();
