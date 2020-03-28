@@ -6,8 +6,12 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.ListView;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public DatabaseHelper(@Nullable Context context) {
@@ -19,10 +23,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("Create table tbl_dokuman(DokumanNumarasi text, DokumanTipi text, DokumanSevkTarihi text, DokumanKayitEden text)");
 
     }
+
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     db.execSQL("drop table if exists user");
-        db.execSQL("drop table if exists tbl_dokuman");
+    db.execSQL("drop table if exists tbl_dokuman");
     }
     public boolean insert(String email,String password){
         SQLiteDatabase db = this.getWritableDatabase();
@@ -45,4 +51,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if(cursor.getCount()>0)return true;
         else return false;
     }
+
+
+
 }

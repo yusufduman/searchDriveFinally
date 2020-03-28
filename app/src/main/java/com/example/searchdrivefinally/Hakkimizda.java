@@ -28,7 +28,7 @@ public class Hakkimizda extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gecisYap = new Intent(Hakkimizda.this, MainActivity.class);
+                Intent gecisYap = new Intent(Hakkimizda.this, DokumanKontrol.class);
                 startActivity(gecisYap);
             }
         });

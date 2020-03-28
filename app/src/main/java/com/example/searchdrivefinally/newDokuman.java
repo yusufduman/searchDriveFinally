@@ -42,7 +42,9 @@ public class newDokuman extends AppCompatActivity {
                 }
             }
         });
+
     }
+
     private void KayitEkle(String text_dokumannumarasi, String text_dokumantipi, String text_dokumansevk, String text_kayiteden) {
         SQLiteDatabase db = Veritabani.getWritableDatabase();
         ContentValues dokumanlar = new ContentValues();
