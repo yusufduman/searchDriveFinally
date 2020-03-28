@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".newDokuman"></activity>
+        <activity android:name=".DokumanActivity"></activity>
         <activity android:name=".usercp" />
         <activity android:name=".Hakkimizda" />
         <activity android:name=".Login" />
