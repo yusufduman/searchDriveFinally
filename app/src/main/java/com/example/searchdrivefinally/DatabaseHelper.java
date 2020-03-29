@@ -11,7 +11,9 @@ import android.widget.ListView;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public DatabaseHelper(@Nullable Context context) {
@@ -52,6 +54,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else return false;
     }
 
+    public List<Map<String, String>> KayitSorgula(String dokumanNumarasi) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select * from tbl_dokuman where DokumanNumarasi=?", new String[]{dokumanNumarasi});
 
+        List<Map<String, String>> dokumanListesi = new ArrayList<>();
+
+        while (cursor.moveToNext()){
+            HashMap<String, String> dokuman = new HashMap<>();
+            dokuman.put("DokumanNumarasi", cursor.getString(0));
+            dokuman.put("DokumanTipi", cursor.getString(1));
+            dokuman.put("DokumanSevkTarihi", cursor.getString(2));
+            dokuman.put("DokumanKayitEden", cursor.getString(3));
+
+            dokumanListesi.add(dokuman);
+        }
+
+        return dokumanListesi;
+    }
 
 }

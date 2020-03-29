@@ -16,7 +16,6 @@
         android:layout_marginTop="136dp"
         android:background="@drawable/editarka"
         android:gravity="center"
-
         android:hint="Döküman Numarsı Giriniz"
         android:textColor="#6F000000"
         android:textColorHint="#6F000000"
