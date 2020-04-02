@@ -7,12 +7,16 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class DokumanKontrol extends AppCompatActivity {
     private DatabaseHelper Veritabani;
@@ -20,34 +24,40 @@ public class DokumanKontrol extends AppCompatActivity {
     EditText sorguDokuman;
     ListView sorguListe;
     Button sorguButon;
+    DokumanAdapter dokumanAdapter;
+    private List<Map<String, String>> dokumanListesi = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dokuman_kontrol);
+        dokumanAdapter = new DokumanAdapter(this, dokumanListesi);
         db =  new DatabaseHelper(this);
         sorguDokuman = (EditText) findViewById(R.id.sorguDokuman);
         sorguListe = (ListView) findViewById(R.id.sorguListe);
-        sorguButon = (Button) findViewById(R.id.sorguButon);
-        /*sorguButon.setOnClickListener(new View.OnClickListener() {
+        sorguListe.setAdapter(dokumanAdapter);
+        sorguButon = (Button) findViewById(R.id.btn_listele);
+        sorguButon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try{
-                    SQLiteDatabase db = new Veritabani(getApplicationContext());
-                    List<Kisiler> kisilerList = new ArrayList<Kisiler>();
-                    kisilerList = vt.TumKayitlariGetir();
-                    StringBuilder stringBuilder = new StringBuilder();
-                    for(Kisiler kisiler : kisilerList){
-                        stringBuilder.append(kisiler.getAd()+"\n"+kisiler.getSoyAd()+"\n\n");
+                    DatabaseHelper db = new DatabaseHelper(getApplicationContext());
+                    String dokumanNo = sorguDokuman.getText().toString();
+
+                    dokumanListesi.clear();
+                    dokumanListesi.addAll(db.KayitSorgula(dokumanNo));
+                    dokumanAdapter.notifyDataSetChanged();
+
+                    if(dokumanListesi.isEmpty()){
+                        Toast.makeText(DokumanKontrol.this, "Döküman Bulunamadı!", Toast.LENGTH_SHORT).show();
                     }
-                    tv.setText(stringBuilder);
                 }
                 catch(Exception e){
-                    tv.setText("Kayıt Bulunamadı!"+e);
+
                 }
             }
-        }*/
-        //sorgulamada denedim ancak bir türlü başlantısını yapamadım veri tabanı ile.
+        }
+
         );
     }
 
