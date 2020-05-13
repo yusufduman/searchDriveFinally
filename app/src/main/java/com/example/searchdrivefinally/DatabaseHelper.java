@@ -23,6 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create table user(email text primary key, password text)");
         db.execSQL("Create table tbl_dokuman(DokumanNumarasi text, DokumanTipi text, DokumanSevkTarihi text, DokumanKayitEden text)");
+        db.execSQL("Create table tbl_tasarim(DokumanNumarasi text, TasarimTipi text, TasarimNumarasi text, TasarimKayitEden text)");
 
     }
 
@@ -31,6 +32,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     db.execSQL("drop table if exists user");
     db.execSQL("drop table if exists tbl_dokuman");
+    db.execSQL("drop table if exists tbl_tasarim");
     }
     public boolean insert(String email,String password){
         SQLiteDatabase db = this.getWritableDatabase();

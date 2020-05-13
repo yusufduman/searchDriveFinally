@@ -34,7 +34,7 @@
         android:background="#F68D9A"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:gravity="center"
         android:textSize="20sp"/>
 

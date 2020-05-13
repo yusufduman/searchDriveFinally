@@ -4,49 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/digerarka"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="200dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/editarka"
         android:ems="10"
+        android:gravity="center"
         android:hint="Email"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#6F000000" />
 
     <EditText
         android:id="@+id/pass"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="360dp"
+        android:background="@drawable/editarka"
         android:ems="10"
+        android:gravity="center"
         android:hint="Sifre"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textColorHint="#6F000000" />
 
     <EditText
         android:id="@+id/cpass"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="420dp"
+        android:background="@drawable/editarka"
         android:ems="10"
+        android:gravity="center"
         android:hint="Tekrar Şifre"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textColorHint="#6F000000" />
 
     <Button
         android:id="@+id/kayitol"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="500dp"
+        android:background="@drawable/butonresim"
+        android:gravity="center"
         android:hint="Kayıt Ol"
-        android:text="Kayıt Ol" />
+        android:text="Kayıt Ekle"
+        android:textColor="#6F000000"
+        android:textColorHint="#6F000000" />
 
     <Button
         android:id="@+id/girisyonlendirme"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:text="Giriş" />
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="560dp"
+        android:background="@drawable/butonresim"
+        android:gravity="center"
+        android:text="Giriş"
+        android:textColor="#6F000000"
+        android:textColorHint="#6F000000" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="124dp"
+        android:background="@drawable/kullaniciekle" />
 
 </RelativeLayout>

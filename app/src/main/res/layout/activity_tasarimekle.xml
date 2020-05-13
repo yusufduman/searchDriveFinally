@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/digerarka"
+    tools:context=".Tasarimekle">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="124dp"
+        android:background="@drawable/tasarimekle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/cizimDokumanNumarasi"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/editarka"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Döküman Numarası Giriniz"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#6F000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <EditText
+        android:id="@+id/tasarimNumarasi"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/editarka"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Çizim / Tasarım Numarasını Giriniz"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#6F000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tasarimTipi" />
+
+    <EditText
+        android:id="@+id/tasarimKayitEden"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/editarka"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Çizim / Tasarım Kayıt Eden"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#6F000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tasarimNumarasi" />
+
+    <EditText
+        android:id="@+id/tasarimTipi"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/editarka"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Çizim / Tasarım Tipini Giriniz"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#6F000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cizimDokumanNumarasi" />
+
+    <Button
+        android:id="@+id/kayıtEt"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginLeft="204dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/butonresim"
+        android:text="KAYIT ET"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tasarimKayitEden" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".DokumanKontrol"></activity>
+        <activity android:name=".Tasarimekle"></activity>
+        <activity android:name=".DokumanKontrol" />
         <activity android:name=".newDokuman" />
         <activity android:name=".usercp" />
         <activity android:name=".Hakkimizda" />
